@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block profile %}
+<li class="right"><a href="/profile">Profile</a></li>
+{% endblock %}
+
+{% block content %}
+    <div class="body">
+        
+<h1>Are you sure you want to delete your profile?</h1>
+        <form method="post">
+            {% csrf_token %}
+            <button class="submit">Confirm</button>
+        </form>
+    </div>
+{% endblock %}

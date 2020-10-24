@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block profile %}
+<li class="right"><a href="/profile">Profile</a></li>
+{% endblock %}
+
+{% block content %}
+    <div class="body">
+        
+<h1>Create Expense</h1>
+<div class="form">
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Create">
+    </form>
+</div>
+
+    </div>
+{% endblock %}
